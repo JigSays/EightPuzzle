@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainScreenViewController" customModule="EightPuzzle___AleksPenev_JordanGary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Eight Puzzle Game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08f-Sy-qEh">
+                                <rect key="frame" x="39" y="116" width="336" height="69.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69.5" id="5Tr-Pe-438"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aD-ei-wcU">
+                                <rect key="frame" x="179" y="683" width="56" height="59"/>
+                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AK8-cE-QvL"/>
+                                    <segue destination="bAU-nI-eJk" kind="popoverPresentation" popoverAnchorView="6aD-ei-wcU" id="ndK-pj-NlW">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please press the button below to begin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxG-dm-LD8">
+                                <rect key="frame" x="58" y="566" width="298" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnP-ys-OCO">
+                                <rect key="frame" x="39" y="233" width="336" height="289"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="d29-Mp-zES"/>
+                                </constraints>
+                                <string key="text">Rules:                                                                                             --------------------------------------------Click on adjacent blocks in order to swap the blocks. Try to order the picture correctly.                    --------------------------------------------Swipe left once started to switch from 3x3 picture to 5x5 picture. Swipe right to switch back.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cnP-ys-OCO" firstAttribute="top" secondItem="08f-Sy-qEh" secondAttribute="bottom" constant="47.5" id="1cL-tb-qbO"/>
+                            <constraint firstItem="bxG-dm-LD8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9cd-Qk-2TG"/>
+                            <constraint firstItem="6aD-ei-wcU" firstAttribute="top" secondItem="bxG-dm-LD8" secondAttribute="bottom" constant="96" id="Cln-Ed-NF8"/>
+                            <constraint firstItem="cnP-ys-OCO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="DjW-Sb-Sbl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6aD-ei-wcU" secondAttribute="bottom" constant="120" id="GTX-yK-MTp"/>
+                            <constraint firstItem="bxG-dm-LD8" firstAttribute="top" secondItem="08f-Sy-qEh" secondAttribute="bottom" constant="380.5" id="Jy2-Bm-Twa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="08f-Sy-qEh" secondAttribute="trailing" constant="39" id="LXw-dd-S8Y"/>
+                            <constraint firstItem="08f-Sy-qEh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="MX1-6z-7ez"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cnP-ys-OCO" secondAttribute="trailing" constant="39" id="SjD-eI-0Gl"/>
+                            <constraint firstItem="08f-Sy-qEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="kHm-cz-Beu"/>
+                            <constraint firstItem="6aD-ei-wcU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mqr-Rr-mIN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="133.25892857142856"/>
+        </scene>
+        <!--Three By Three View Controller-->
+        <scene sceneID="if4-72-lh8">
+            <objects>
+                <viewController id="bAU-nI-eJk" customClass="ThreeByThreeViewController" customModule="EightPuzzle___AleksPenev_JordanGary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E6p-1i-Wcb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvO-Wn-GTV">
+                                <rect key="frame" x="19" y="44" width="376" height="376"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="376" id="DIO-uf-g2i"/>
+                                    <constraint firstAttribute="height" constant="376" id="v87-WJ-aOk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pvO-Wn-GTV" firstAttribute="top" secondItem="IH6-bW-coj" secondAttribute="top" id="8jN-Vw-jc6"/>
+                            <constraint firstItem="pvO-Wn-GTV" firstAttribute="centerX" secondItem="E6p-1i-Wcb" secondAttribute="centerX" id="HoF-fH-ngP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IH6-bW-coj"/>
+                    </view>
+                    <connections>
+                        <outlet property="blocksView" destination="pvO-Wn-GTV" id="ieo-Gi-oU1"/>
+                        <segue destination="6EQ-HQ-Qeb" kind="popoverPresentation" identifier="moveToFive" popoverAnchorView="E6p-1i-Wcb" id="dWW-6V-kWN">
+                            <popoverArrowDirection key="popoverArrowDirection" right="YES"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nS5-Jy-Kut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863.768115942029" y="133.25892857142856"/>
+        </scene>
+        <!--Five By Five View Controller-->
+        <scene sceneID="PBt-sQ-mbq">
+            <objects>
+                <viewController id="6EQ-HQ-Qeb" customClass="FiveByFiveViewController" customModule="EightPuzzle___AleksPenev_JordanGary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LPM-TE-hiZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEg-iq-6r0">
+                                <rect key="frame" x="20" y="44" width="374" height="374"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SAM-2z-p4E"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vWq-4H-ONq"/>
+                    <connections>
+                        <outlet property="blocksView" destination="dEg-iq-6r0" id="DHE-L9-xJB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHp-OK-7nC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595.6521739130435" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+</document>
